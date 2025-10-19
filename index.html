@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
-        <title>Hyperbolic tree</title>
+        <title>Tsinghua University Hyperbolic tree</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -143,102 +143,27 @@
         in 
 */
         const html = {
-            en: `       A phylogenetic tree or evolutionary tree is a branching diagram or "tree"
-                        showing the evolutionary relationships among various biological species.<sup>Wiki</sup>
+            en: `       这是清华大学院系结构的交互式可视化展示，
+                        展现了不同学院、系所和研究中心之间的组织关系。<sup>清华大学</sup>
                         <br><br>
-                        The <a href="//opentreeoflife.org">Open Tree of Life</a>
-                        project provides a phylogenetic tree containing more than 2 million species.
-                        This dataset receives updates from scientific sources since 2015.
+                        <a href="https://www.tsinghua.edu.cn">清华大学</a>
+                        是中国最著名的高等学府之一，拥有完整的院系和研究机构体系。
+                        本可视化系统展示了包括20个学院、42个系、30多个研究院（所、中心）的组织结构。
                         <br><br>
-                        A Hyperbolic browser is an interactive "tree" visualization, 
-                        similar to a map application.
-                        The "tree" can be explored by panning. 
-                        Pinch gestures and mouse wheel can be used to focus in and out.
+                        这个双曲树浏览器提供了一个交互式的"树状"可视化界面，
+                        让您可以探索清华大学的组织层级结构。
+                        您可以通过拖拽来平移视图，使用捏合手势或鼠标滚轮来放大缩小不同区域。
                         <br><br>
-                        Unfortunately the entire dataset can not be rendered yet, 
-                        hence it is split in branches,
-                        each containing up to 50 000 species.                                                
+                        本系统完整展示了学校的组织架构，包括各个学院、系所、研究中心以及领导职务。
                         <b class="emph">
-                        Click on a branch
-                        </b> 
-                        of the "tree" on the right, to open such a branch and browse its species.
-                        The Wikipedia page of the species next to the center will be shown automatically.
-                        Branches above vertebrates show all known species.
-                        Branches near the stem hide clades with less than ten species.  
+                        点击树状图中的节点
+                        </b>
+                        可以展开查看该单位的详细信息，包括下属机构和领导层构成。
                         <br><br>
-                        Have fun with exploring earths creatures. 
-                        Hyperbolic Tree of life is based on                         
-                        <a href="https://github.com/glouwa/d3-hypertree/">d3-hypertree</a>,
-                        a open source hyperbolic browser.
-                        Participation is welcome in many ways:                         
-                        <a href="https://github.com/glouwa/d3-hypertree/issues/new/choose">feedback</a>,
-                        <a href="https://github.com/glouwa/d3-hypertree/blob/master/CONTRIBUTING.md">code contributions</a>,
-                        and of course also <a href="https://www.patreon.com/user?u=11112015">donations</a>.
-                `,
-            de: `       A phylogenetic tree or evolutionary tree is a branching diagram or "tree"
-                        showing the evolutionary relationships among various biological species.<sup>Wiki</sup>
-                        <br><br>
-                        The <a href="//opentreeoflife.org">Open Tree of Life</a>
-                        project provides a phylogenetic tree containing more than 2 million species.
-                        This dataset receives updates from scientific sources since 2015.
-                        <br><br>
-                        A Hyperbolic browser is an interactive "tree" visualization, 
-                        similar to a map application.
-                        The "tree" can be explored by panning. 
-                        Pinch gestures and mouse wheel can be used to focus in and out.
-                        <br><br>
-                        Unfortunately the entire dataset can not be rendered yet, 
-                        hence it is split in branches,
-                        each containing up to 50 000 species.                                                
-                        <b class="emph">
-                        Click on a branch
-                        </b> 
-                        of the "tree" on the right, to open such a branch and browse its species.
-                        The Wikipedia page of the species next to the center will be shown automatically.
-                        Branches above vertebrates show all known species.
-                        Branches near the stem hide clades with less than ten species.  
-                        <br><br>
-                        Have fun with exploring earths creatures. 
-                        Hyperbolic Tree of life is based on                         
-                        <a href="https://github.com/glouwa/d3-hypertree/">d3-hypertree</a>,
-                        a open source hyperbolic browser.
-                        Participation is welcome in many ways:                         
-                        <a href="https://github.com/glouwa/d3-hypertree/issues/new/choose">feedback</a>,
-                        <a href="https://github.com/glouwa/d3-hypertree/blob/master/CONTRIBUTING.md">code contributions</a>,
-                        and of course also <a href="https://www.patreon.com/user?u=11112015">donations</a>.
-                `,
-            dev: `      Hyperbolic tree of life visualizes a evolutionary tree provided by the
-                        <a href="//opentreeoflife.org">Open Tree of Life</a>
-                        project. It contains more than two million species,
-                        grouped in seven branches.
-                        <b class="emph">Click on a branch to open it.</b>
-                        Like on a map you can pan and zoom,
-                        in this case to browse clades and species. 
-                        The Wikipedia page of the species next to the center will be 
-                        opened automatically. The clades eukariots, embryophyte and insects do not jet
-                        show all subspecies due to technical reasons. 
-                        <!--You can also 
-                        <a href="upload">upload</a>
-                        and visualize your own Newick file.-->
-                                                
-                        <div class="topic">d3-hypertree</div>
-                        Hyperbolic tree of life is based on <a href="https://github.com/glouwa/d3-hypertree">d3-hypertree</a>, 
-                        a MIT licenced hyperbolic browsing web component avaliable on 
-                        github. This <a href="https://github.com/glouwa/d3-hypertree">documentation</a> describes how to integrate it 
-                        in your website.
-
-                        It can visualize various file formats, and apearance may be customized, 
-                        see 
-                        <a href="https://glouwa.github.io/d3-hypertree-examples/feature-slides/rslidy.html">feature slides</a>
-                        for details. 
-                        If you are interested in how it works, 
-                        take a loik on the <a href="https://glouwa.github.io/d3-hypertree-examples/hyperbolictree-slides/">hyperbolic browsing</a> slides.                        
-                        <br>
-                        
-                        <br>
-                        Have fun at exploring earths creatures, 
-                        and if you like it, <a href="">donate</a> here.
-                  `
+                        本可视化工具基于开源的
+                        <a href="https://github.com/glouwa/d3-hypertree/">d3-hypertree</a>
+                        双曲树浏览器开发。
+                `
         }
         /*
         what is it (pose with # of nodes), how to interact, data from otol, upload own file, 
