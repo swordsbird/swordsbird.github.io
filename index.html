@@ -116,28 +116,8 @@
                                 {
                                     dataloader: htol.loaders.fromFile(`hierarchies/tsinghua_tree.json`),
                                     langloader: htol.loaders.fromLangFile(`langmaps/${l}.lang.json`),
-                                    dataInitBFS: (ht, n)=> {
-                                        const id = n.data.name
-                                        n.precalc.imageHref = iconmap.fileName2IconUrl(id, n.data.type)
-                                        n.precalc.icon = iconmap.emojimap[id]    
-                                        
-                                        if (n.children)
-                                            if (n.height%2 === 0)
-                                                n.children = n.children.reverse()
-                                    },
-                                    langInitBFS: (ht, n)=> {                
-                                        const id = n.data && n.data.name
-                                        const l  = ht.langMap && ht.langMap[id] && '𝐖 ' + ht.langMap[id] 
-                                        if (!otolSetModel.fileExists(id)) {
-                                            n.precalc.wiki = ""
-                                            n.precalc.label = ""
-                                            n.precalc.clickable = false
-                                        }
-                                        else {
-                                            n.precalc.wiki = l
-                                            n.precalc.label = l || id
-                                            n.precalc.clickable = otolSetModel.fileExists(id)
-                                        }
+                                    langInitBFS: (ht, n)=> {
+                                        n.precalc.label = `${n.data.name}`
                                     },
                                     layout: {            
                                         weight: (n)=> (isLeaf(n)?1:0),            
@@ -147,36 +127,14 @@
                                         }
                                     },
                                     geometry: {
-                                        nodeRadius: nodeInitR(.0075),
-                                        captionFont: '8px Roboto',
-                                        captionHeight: .05,
                                         layerOptions: {
-                                            'cells': {
-                                                hideOnDrag: false,
-                                                invisible: false,
-                                                strokeWidth: n=> 0,
-                                            },
-                                            'labels': {
-                                                hideOnDrag: true,
-                                                invisible: true
-                                            },
-                                            'labels-force': {
-                                                hideOnDrag: true,
-                                                invisible: false
-                                            },
-                                        }
+                                            'images': { width: .16, height: .16 },
+                                            'stem-arc': { invisible: true, hideOnDrag: true },
+                                            labels:  { background: n=> true }
+                                        } 
                                     },
                                     interaction: {              
-                                        λbounds: [1/40, 1/10],
-                                        onNodeClick: (n, m, l)=> { 
-                                            window.location.href = `/otol.html?c=${n.data.name.toLowerCase()}`
-                                            /*
-                                            l.ripple(n, m, ()=> {
-                                                console.log("+++++++++++", n.data.name, m)                                                
-                                                
-                                            })
-                                            */
-                                        }                                        
+                                        λbounds: [1/40, 1/10]                                    
                                     }
                                 }
                             )                            
