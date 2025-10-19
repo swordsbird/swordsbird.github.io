@@ -118,30 +118,11 @@
                                     langloader: htol.loaders.fromLangFile(`langmaps/${l}.lang.json`),
                                     langInitBFS: (ht, n)=> {
                                         n.precalc.label = `${n.data.name}`
-                                    },
-                                    layout: {            
-                                        weight: (n)=> (isLeaf(n)?1:0),            
-                                        rootWedge: {    
-                                            orientation: 3*π/2,
-                                            angle: .7*π/2
-                                        }
-                                    },
-                                    geometry: {
-                                        layerOptions: {
-                                            'images': { width: .16, height: .16 },
-                                            'stem-arc': { invisible: true, hideOnDrag: true },
-                                            labels:  { background: n=> true }
-                                        } 
-                                    },
-                                    interaction: {              
-                                        λbounds: [1/40, 1/10]                                    
                                     }
                                 }
                             )                            
                             app.hypertree.initPromise
                                 .then(()=> new Promise((ok, err)=> app.hypertree.animateUp(ok, err)))
-                                .then(()=> app.hypertree.api.goto({ re:-.05, im: .85 }, null))
-                                .then(()=> app.hypertree.api.gotoλ(.06))  
                                 .then(()=> app.hypertree.drawDetailFrame())
                         }
                     }            
