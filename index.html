@@ -115,7 +115,7 @@
                             app.hypertree = new htol.Hypertree(
                                 { parent:document.querySelector('#maintree') }, 
                                 {
-                                    dataloader: htol.loaders.fromFile(`hierarchies/eukaryota.d3.json`),
+                                    dataloader: htol.loaders.fromFile(`hierarchies/tsinghua_tree.json`),
                                     langloader: htol.loaders.fromLangFile(`langmaps/${l}.lang.json`),
                                     dataInitBFS: (ht, n)=> {
                                         const id = n.data.name
