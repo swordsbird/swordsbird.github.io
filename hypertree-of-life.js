@@ -46226,6 +46226,7 @@ class InputJSON {
     }
     static createNodes(json) {
         let tree = [];
+        console.log("createNodes Json", json);
         json.forEach((obj) => {
             let node = new TreeNode().deserialize(obj);
             tree.push(node);
